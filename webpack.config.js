@@ -21,8 +21,13 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|svg|jpg|gif|jpeg|json)$/,
-                use: ['file-loader'],
+                test: /\.(png|svg|jpg|gif|jpeg|)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: { name: '[name].[ext]' },
+                    },
+                ],
             },
             {
                 test: /\.(js|ts)x?$/,

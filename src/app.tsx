@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React from 'react';
-import Tensor from 'src/tensor/teste'
-
+import Cars from 'src/Cars/cars'
 
 const Root: React.FunctionComponent = () => (
     <Router>
-        <Route path="/" component={Tensor} />
+        <Route path="/" component={Cars} />
     </Router>
 );
 
